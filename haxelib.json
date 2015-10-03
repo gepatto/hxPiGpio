@@ -1,0 +1,13 @@
+{
+  "name": "hxPiGpio",
+  "url": "https://github.com/gepatto/hxPiGpio",
+  "license": "MIT",
+  "tags": [ "Raspberry Pi", "GPIO"],
+  "description": "",
+  "version": "0.1.0",
+  "releasenote": " (2015) requires wiringPi to be installed, runs only without sudo on Raspbian Jessie",
+  "contributors": ["Patrick Gutlich"],
+  "dependencies": {
+
+  }
+}
