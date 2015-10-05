@@ -49,6 +49,10 @@ class PiGpio {
 		pigpio_analogWrite(pin,value);
 	}
 	
+	public static function setupMcp300x(base:Int, spiChan:Int):Void{
+		pigpio_setupMcp300x(base,spiChan);
+	}
+
 	private static var pigpio_sample_method 	= Lib.load ("pigpio", "pigpio_sample_method", 1);
 	
 	private static var pigpio_wiringPiSetup 	= Lib.load ("pigpio", "pigpio_wiringPiSetup", 0);
@@ -64,6 +68,7 @@ class PiGpio {
 	private static var pigpio_pwmWrite 			= Lib.load ("pigpio", "pigpio_pwmWrite", 2);
 	private static var pigpio_analogRead 		= Lib.load ("pigpio", "pigpio_analogRead", 1);
 	private static var pigpio_analogWrite 		= Lib.load ("pigpio", "pigpio_analogWrite", 2);
+	private static var pigpio_setupMcp300x 		= Lib.load ("pigpio", "pigpio_setupMcp300x", 2);
 	
 	public static var INPUT 			:Int = 0;
 	public static var OUTPUT 			:Int = 1;

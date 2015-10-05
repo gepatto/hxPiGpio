@@ -10,6 +10,7 @@
 #include <hx/CFFI.h>
 #include "Utils.h"
 #include <wiringPi.h> 
+#include <mcp3004.h>
 
 using namespace pigpio;
 
@@ -102,6 +103,11 @@ static void pigpio_pwmWrite (value pin, value pinValue) {
 }
 DEFINE_PRIM (pigpio_pwmWrite, 2);
 
+
+static void pigpio_setupMcp300x (value base, value spiChan) {
+	mcp3004Setup(val_int(base), val_int(spiChan));
+}
+DEFINE_PRIM (pigpio_setupMcp300x, 2);
 
 /* ------------------
 |  
