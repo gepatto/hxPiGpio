@@ -8,7 +8,7 @@
 
 
 #include <hx/CFFI.h>
-#include "Utils.h"
+#include "piGpio.h"
 #include <wiringPi.h> 
 #include <mcp3004.h>
 
