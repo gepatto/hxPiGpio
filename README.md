@@ -1,7 +1,9 @@
 # hxPiGpio
 Haxe/OpenFL extension for using the GPIO Ports on the Rapberry Pi
 
-# Status: under development
+# Status: Deprecated.
+
+# WiringPi is no longer maintained, so unfortunately this means the end of this this extension 
 
 Requires wiringPi 2.29 to be installed.  
 *Not all methods in WiringPi are exposed!*
