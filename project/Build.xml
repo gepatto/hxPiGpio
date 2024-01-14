@@ -9,7 +9,8 @@
 
 		<file name="common/ExternalInterface.cpp"/>
 		<file name="common/piGpio.cpp"/>
-		
+		<file name="common/ttp229.c"/>
+
 	</files>
 	
 	<set name="DEBUGEXTRA" value="-debug" if="fulldebug" />

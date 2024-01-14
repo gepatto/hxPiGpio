@@ -11,6 +11,7 @@
 #include "piGpio.h"
 #include <wiringPi.h> 
 #include <mcp3004.h>
+#include <ttp229.h>
 
 using namespace pigpio;
 
@@ -104,10 +105,22 @@ static void pigpio_pwmWrite (value pin, value pinValue) {
 DEFINE_PRIM (pigpio_pwmWrite, 2);
 
 
+/** 
+ *
+ */
 static void pigpio_setupMcp300x (value base, value spiChan) {
 	mcp3004Setup(val_int(base), val_int(spiChan));
 }
 DEFINE_PRIM (pigpio_setupMcp300x, 2);
+
+/** 
+ *
+ */
+static value pigpio_setupTtp229 (value base) {
+	int returnValue = ttp229Setup(val_int(base));
+	return alloc_int(returnValue);
+}
+DEFINE_PRIM (pigpio_setupTtp229, 1);
 
 /* ------------------
 |  
@@ -119,7 +132,6 @@ extern "C" void pigpio_main () {
 	
 }
 DEFINE_ENTRY_POINT (pigpio_main);
-
 
 
 extern "C" int pigpio_register_prims () { return 0; }
